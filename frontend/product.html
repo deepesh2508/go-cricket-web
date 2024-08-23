@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-md-6">
+                <div class="product-images">
+                    <img src="path/to/main-image.jpg" class="img-fluid main-image" alt="Product Image">
+                    <div class="thumbnail-images mt-3 d-flex flex-column">
+                        <img src="path/to/thumb1.jpg" class="img-thumbnail mb-2" alt="Thumbnail 1">
+                        <img src="path/to/thumb2.jpg" class="img-thumbnail mb-2" alt="Thumbnail 2">
+                        <img src="path/to/thumb3.jpg" class="img-thumbnail" alt="Thumbnail 3">
+                    </div>
+                </div>
+            </div>
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Cricket Bats</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">SS Ikon Kashmir Willow Cricket Bat Size SH</li>
+                    </ol>
+                </nav>
+                <h1 class="product-title">SSS Ikon Kashmir Willow Cricket Bat Size SH</h1>
+                <div class="price">
+                    <span class="current-price">₹18,965</span> 
+                    <span class="original-price text-muted">₹22,312</span> 
+                    <span class="discount">Save 15%</span>
+                </div>
+                <div class="stock-status text-warning">Low stock - 2 items left</div>
+                <div class="quantity mt-3">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control w-25">
+                </div>
+                <div class="action-buttons mt-4">
+                    <button class="btn btn-primary btn-lg btn-block" onclick="addToCart('SS Ikon Kashmir Willow Cricket Bat Size SH', 18965, 'assets/images/kasmirwillow/ss_ikon.jpg')">Add to Cart</button>
+                    <button class="btn btn-dark btn-lg btn-block mt-2">Buy It Now</button>
+                </div>
+                <!-- Collapsible Sections -->
+                <div class="product-info mt-5">
+                    <div class="toggle-section">
+                        <div class="toggle-header" onclick="toggleContent('description')">
+                            <span>Description</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="toggle-content" id="description">
+                            <p>
+                                Features of SG Players Ultimate English Willow Cricket Bat: From the Aggressor Series of SG Cricket. Latest 2024 Model.
+                            </p>
+                            <ul>
+                                <li>Bat made specially for T-20 Cricket.</li>
+                                <li>Made from Premium Grade English Willow.</li>
+                                <li>Edge Thickness up to 39-40 mm</li>
+                                <li>6-11 Straight Grains.</li>
+                                <li>Full profile with no concavity.</li>
+                                <li>New color grip for a superior sense of control.</li>
+                                <li>Comes with a full-length padded bat cover with an adjustable strap.</li>
+                                <li>Mid-level bulge for improvisational stroke maker.</li>
+                                <li>Available in Senior/Men’s Size SH Before placing the order.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-section mt-4">
+                        <div class="toggle-header" onclick="toggleContent('additional-info')">
+                            <span>Additional Information</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="toggle-content" id="additional-info">
+                            <p>
+                                <strong>Manufacturer:</strong> Plot no-1250, Gangol Road Partapur, Meerut Pincode -250103 <br>
+                                <strong>Packer:</strong> Plot no-1250, Gangol Road Partapur, Meerut Pincode -250103 <br>
+                                <strong>Country Of Origin:</strong> India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Icons -->
+                <div class="icons mt-5 d-flex justify-content-between">
+                    <div class="text-center">
+                        <img src="assets/images/product/free return.webp" alt="Free Returns">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="assets/images/kasmirwillow/ss_ikon.jpg" alt="Product Image">
+                <div class="item-details">
+                    <p>SS Ikon Kashmir Willow Cricket Bat Size SH</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                </div>
+                <div class="item-price">₹17,099</div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal-container">
+                <span class="subtotal-label">SUBTOTAL</span>
+                <span class="subtotal">₹17,099</span>
+            </div>
+            <p class="checkout-info">Shipping, taxes, and discount codes calculated at checkout.</p>
+            <button class="checkout-btn">CHECK OUT</button>
+        </div>
+    </div>
+    
+
+    <script src="assets/js/product.js"></script>
+</body>
+</html>

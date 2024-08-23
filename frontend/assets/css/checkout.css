@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-section, .right-section {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 48%;
+}
+
+h2, h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+}
+
+.newsletter, .save-info, .payment-options, .billing-options {
+    margin-bottom: 20px;
+}
+
+.payment-options label, .billing-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.payment-options img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.pay-now-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pay-now-btn:hover {
+    background-color: #0056b3;
+}
+
+.policies a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.policies a:hover {
+    text-decoration: underline;
+}
+
+.right-section h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.product-details p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.subtotal, .shipping, .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.apply-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.apply-btn:hover {
+    background-color: #555;
+}
+
+.delivery-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group.col-md-6 {
+    width: 48%;
+}
+
+.form-group.col-md-4 {
+    width: 30%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page with Cart Drawer</title>
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Product Page Content -->
+        <div class="product-page">
+            <button class="btn add-to-cart" onclick="toggleCart()">Add to Cart</button>
+        </div>
+
+        <!-- Cart Drawer -->
+        <div id="cartDrawer" class="cart-drawer">
+            <div class="cart-header">
+                <h2>Cart</h2>
+                <button class="close-btn" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+                <div class="cart-item">
+                    <img src="path/to/image1.jpg" alt="Product Image">
+                    <div class="item-details">
+                        <p>SG Players Ultimate English Willow Cricket Bat Size SH</p>
+                        <p>₹18,965</p>
+                        <input type="number" value="1" min="1">
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="path/to/image2.jpg" alt="Product Image">
+                    <div class="item-details">
+                        <p>Kookaburra Aura Pro 2.0 English Willow Cricket Bat Size Harrow</p>
+                        <p>₹17,099</p>
+                        <input type="number" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <p class="subtotal">Subtotal: ₹36,064</p>
+                <p class="shipping-info">Shipping, taxes, and discount codes calculated at checkout.</p>
+                <button class="checkout-btn">Check Out</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/cart.js"></script>
+</body>
+</html>

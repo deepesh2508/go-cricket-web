@@ -9,7 +9,7 @@ import (
 	"github.com/deepesh2508/go-cricket-web/handlers/invoice"
 	"github.com/deepesh2508/go-cricket-web/handlers/orders"
 	"github.com/deepesh2508/go-cricket-web/handlers/users"
-	m "github.com/deepesh2508/go-cricket-web/middleware"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -18,22 +18,18 @@ func main() {
 	gin.DisableConsoleColor()
 
 	router := gin.New()
-	router.RedirectFixedPath = true
-	router.RedirectTrailingSlash = true
-
-	// Health check route
-	router.GET("/healthz", m.Healthz)
-
-	// Apply middlewares
-	router.Use(m.GenerateUUID(), m.RequestLogger(), gin.CustomRecovery(m.GinPanicRecovery()))
-
-	// Define your routes and groups here
+	router.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"http://127.0.0.1:5500"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowHeaders:     []string{"Content-Type", "Authorization"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+	}))
 
 	// Cart routes
 	cartGroup := router.Group("/cart")
 	{
 		cartGroup.POST("/add", cart.AddToCart)
-		// Add other cart-related routes here
 	}
 
 	// Invoice routes
@@ -54,7 +50,7 @@ func main() {
 	usersGroup := router.Group("/users")
 	{
 		usersGroup.POST("/signup", users.SignUp)
-		usersGroup.POST("/signup", users.Login)
+		usersGroup.POST("/login", users.Login)
 	}
 
 	// Start the server

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="left-section">
+            <h2>Cricketershop</h2>
+
+            <div class="contact-section">
+                <h3>Contact</h3>
+                <input type="email" placeholder="Email">
+                <div class="newsletter">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Email me with news and offers</label>
+                </div>
+            </div>
+
+            <div class="delivery-section">
+                <h3>Delivery</h3>
+                <select>
+                    <option>Country/Region</option>
+                    <option>India</option>
+                </select>
+                <input type="text" placeholder="First name (optional)">
+                <input type="text" placeholder="Last name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Apartment, suite, etc. (optional)">
+                <input type="text" placeholder="City">
+                <select>
+                    <option>State</option>
+                    <option>Haryana</option>
+                </select>
+                <input type="text" placeholder="PIN code">
+                <input type="text" placeholder="Phone">
+                <div class="save-info">
+                    <input type="checkbox" id="save-info">
+                    <label for="save-info">Save this information for next time</label>
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <h3>Payment</h3>
+                <p>All transactions are secure and encrypted.</p>
+                <div class="payment-options">
+                    <input type="radio" name="payment" id="razorpay">
+                    <label for="razorpay">
+                        <img src="razorpay-logo.png" alt="Razorpay Logo">
+                        Razorpay Secure (UPI, Cards, Wallets, NetBanking)
+                    </label>
+                    <input type="radio" name="payment" id="cod">
+                    <label for="cod">Cash on Delivery (COD)</label>
+                </div>
+            </div>
+
+            <div class="billing-section">
+                <h3>Billing address</h3>
+                <div class="billing-options">
+                    <input type="radio" name="billing" id="same-as-shipping">
+                    <label for="same-as-shipping">Same as shipping address</label>
+                    <input type="radio" name="billing" id="different-address">
+                    <label for="different-address">Use a different billing address</label>
+                </div>
+            </div>
+
+            <button class="pay-now-btn">Pay now</button>
+            <div class="policies">
+                <a href="#">Refund policy</a>
+                <a href="#">Shipping policy</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms of service</a>
+                <a href="#">Contact information</a>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="product">
+                    <img src="product-image.jpg" alt="Product Image">
+                    <div class="product-details">
+                        <p>SG Players Ultimate English Willow Cricket Bat Size SH</p>
+                        <p>₹18,965.00</p>
+                    </div>
+                </div>
+                <div class="subtotal">
+                    <p>Subtotal</p>
+                    <p>₹18,965.00</p>
+                </div>
+                <!-- <div class="shipping">
+                    <p>Shipping</p>
+                    <p>Enter shipping address</p>
+                </div> -->
+                <div class="total">
+                    <p>Total</p>
+                    <p>₹18,965.00</p>
+                </div>
+                <p>Including ₹2,031.96 in taxes</p>
+                <input type="text" placeholder="Discount code">
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>

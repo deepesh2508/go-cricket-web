@@ -38,7 +38,7 @@ func init() {
 	ENV = Config{
 		PROCESS_NAME:  getEnv("PROCESS_NAME", "default-process"),
 		SERVER_IP:     getEnv("SERVER_IP", "0.0.0.0"),
-		API_PORT:      getEnv("API_PORT", "8080"),
+		API_PORT:      getEnv("API_PORT", "8000"),
 		AW_USERNAME:   getEnv("AW_USERNAME", ""),
 		AW_PASSWORD:   getEnv("AW_PASSWORD", ""),
 		POS_USERNAME:  getEnv("POS_USERNAME", ""),

@@ -1,0 +1,863 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #001F3F;
+    background-color: #f0f8ff; /* Light sky blue background */
+}
+
+
+/* Header styles */
+header {
+    background-color: #87ceeb; /* Sky blue */
+    color: #001F3F;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* Top navigation styles */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #87ceeb;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    margin-right: 10px; /* Reduced spacing */
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Closer spacing between icons */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #001F3F;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.right-side .login {
+    color: #001F3F;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* Main navigation */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav li, .right-nav li {
+    margin-left: 15px; /* Minimal spacing */
+}
+
+.left-nav a, .right-nav a {
+    text-decoration: none;
+    color: #001F3F;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo-center {
+    flex: 1;
+    text-align: center;
+}
+
+.logo-center img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.hero-content {
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #000; /* Black color as in the second image */
+    font-weight: normal; /* Remove any bold styling */
+    line-height: 1.2; /* Adjust the line height to bring the text closer together */
+}
+
+.hero-content h1:nth-child(1) {
+    font-weight: bold; /* Make the first line bolder */
+}
+
+.hero-content h1:nth-child(2) {
+    font-family: serif; /* Use a serif font for the second line */
+    font-size: 40px; /* Adjust the font size for the second line */
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #001F3F; /* Dark blue background */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 18px; /* Adjust the font size */
+    border: 1px solid #001F3F; /* Add a border */
+}
+
+.hero {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #87ceeb; /* Sky blue */
+    position: relative;
+    height: 300px; /* Adjust the height to match the second image */
+    border-radius: 0 0 50% 50% / 20% 20% 0 0;
+}
+
+.hero-image {
+    width: 50%;
+    height: 40px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none; /* No border */
+    cursor: pointer; /* Pointer on hover */
+}
+
+
+
+/* Categories section */
+.categories {
+    margin-top: 100px;
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.category-item h3 {
+    font-size: 18px;
+    color: #001F3F;
+}
+
+/* Products section */
+.products {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.product-item {
+    width: 340px; /* Adjust width to fit your layout */
+    border: 1px solid #87ceeb;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff; /* Change background color as needed */
+    position: relative; /* Needed for positioning the sale tag */
+    cursor: pointer; /* Makes the entire block clickable */
+}
+
+.product-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherits text color from parent */
+    display: block; /* Make the link occupy the full area of the .product-item */
+}
+
+.product-item a:hover {
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+.product-item img {
+    width: 100%;
+    height: auto; /* Adjusts the height to maintain the aspect ratio */
+}
+
+.product-item h3 {
+    margin: 10px 0;
+    color: #001F3F;
+}
+
+.product-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #001F3F;
+}
+
+.price-cut {
+    text-decoration: line-through;
+    margin-left: 10px;
+    color: #999;
+}
+
+.sale-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #87ceeb;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* About section */
+.about {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Gallery section */
+.gallery {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    max-width: 30%;
+    height: auto;
+}
+
+/* Videos section */
+.videos {
+    padding: 50px;
+    text-align: center;
+}
+
+.video-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Testimonials section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #ffffff; /* Sky blue background */
+    text-align: center;
+    position: relative;
+    border-radius: 0 0 50% 50% / 20% 20% 0 0;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    color: #001F3F; /* Black text color for heading */
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.testimonial {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+    opacity: 1;
+}
+
+.testimonial p {
+    margin-top: 20px;
+    font-style: italic;
+    color: #001F3F; /* Black text color */
+}
+
+.testimonial p:last-child {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Dots for navigation */
+.testimonial-dots {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.testimonial-dots .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.testimonial-dots .dot.active {
+    background-color: #007bff;
+}
+
+/* Contact section */
+.contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #87ceeb; /* Sky blue */
+    color: #001F3F;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #87cefa; /* Lighter sky blue */
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    color: #001F3F;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content .show-password,
+.modal-content .remember-me {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.modal-content .show-password label,
+.modal-content .remember-me label {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.modal-content .forgot-password {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+}
+
+.modal-content .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content .signup-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo {
+    max-width: 50px; /* Adjust the size as needed */
+    height: auto;
+}
+
+.category-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.category-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+}
+
+.category-item {
+    min-width: 200px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background-color: #555;
+}
+
+.category-item img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    border-radius: 8px; /* Optional: add rounded corners */
+    margin-bottom: 10px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 24px;
+    color: #000000; /* Set the text color to black */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Product Section */
+.product-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+}
+
+.product-item {
+    min-width: 150px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background-color: #555;
+}
+
+.product-item img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    border-radius: 8px; /* Optional: add rounded corners */
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+.product-item .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.about {
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about img {
+    max-width: 45%; /* Set the width to take up about half the space */
+    height: auto;
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.about-content {
+    max-width: 50%; /* Set the width to take up the remaining space */
+    margin-left: 20px;
+}
+
+.about-content h2 {
+    font-size: 24px;
+    color: #000000; /* Set the text color to black */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    text-align: left;
+}
+
+.contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #87ceeb; /* Keep the sky blue background */
+    color: #001F3F;
+}
+
+.contact h2 {
+    font-size: 24px;
+    color: #000; /* Black color for heading */
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+}
+
+.map {
+    flex: 1;
+    max-width: 50%;
+}
+
+.contact-details {
+    flex: 1;
+    max-width: 50%;
+}
+
+.contact-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 15px; /* Increase the space between list items */
+    font-size: 16px;
+}
+
+.contact-icon {
+    margin-right: 15px; /* Increase the gap between the icon and text */
+    font-size: 24px; /* Adjust icon size if needed */
+    line-height: 1; /* Align icon vertically with the text */
+}
+
+.contact-details strong {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px; /* Adjust space between the heading and content */
+}
+
+.contact-details span {
+    display: block; /* Ensure the text stays in one block */
+    line-height: 1.4; /* Adjust line spacing for readability */
+}
+
+footer p {
+    margin-top: 20px;
+    color: #001F3F;
+    font-size: 14px;
+}
+
+/* Apply to the entire modal content */
+#login-modal .modal-content {
+    color: #001F3F; /* Sets the text color for all text inside the modal */
+}
+
+/* Apply specifically to labels */
+#login-modal label {
+    color: #001F3F;
+}
+
+/* Apply to input text */
+#login-modal input[type="email"],
+#login-modal input[type="password"],
+#login-modal input[type="checkbox"] + label {
+    color: #001F3F; /* Changes the text color inside the input fields and checkbox label */
+}
+
+/* Apply to placeholder text */
+#login-modal input[type="email"]::placeholder,
+#login-modal input[type="password"]::placeholder {
+    color: #001F3F;
+    opacity: 1; /* Ensures the placeholder is not faded */
+}
+
+/* Apply to links */
+#login-modal a {
+    color: #001F3F;
+}
+
+/* Apply to the button text */
+#login-modal .btn {
+    color: #FFFFFF; /* This will keep the button text white if the button has a background color */
+    background-color: #001F3F; /* You can also set the background color for the button */
+}
+
+
+
+
+#signup-modal .modal-content {
+    color: #001F3F; /* Sets the text color for all text inside the modal */
+}
+
+/* Apply specifically to labels */
+#signup-modal label {
+    color: #001F3F;
+}
+
+/* Apply to input text */
+#signup-modal input[type="email"],
+#signup-modal input[type="password"],
+#signup-modal input[type="checkbox"] + label {
+    color: #001F3F; /* Changes the text color inside the input fields and checkbox label */
+}
+
+/* Apply to placeholder text */
+#signup-modal input[type="email"]::placeholder,
+#signup-modal input[type="password"]::placeholder {
+    color: #001F3F;
+    opacity: 1; /* Ensures the placeholder is not faded */
+}
+
+/* Apply to links */
+#signup-modal a {
+    color: #001F3F;
+}
+
+/* Apply to the button text */
+#login-modal .btn {
+    color: #FFFFFF; /* This will keep the button text white if the button has a background color */
+    background-color: #001F3F; /* You can also set the background color for the button */
+}

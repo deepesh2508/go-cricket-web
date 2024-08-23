@@ -13,31 +13,33 @@ import (
 func SignUp(c *gin.Context) {
 	var req Signupreq
 
+	//json binding the request
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
+	//hashing the password which we get in request body
 	hashedPassword, err := HashPassword(req.Password)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to hash password"})
 		return
 	}
 
+	//preparing user struct for mutation
 	user := User{
-		FirstName: req.FirstName,
-		LastName:  req.LastName,
+		Name:      req.Name,
 		Email:     req.Email,
 		Mobile:    req.Mobile,
 		Password:  hashedPassword,
-		Role:      req.Role,
 		CreatedAt: time.Now(),
 		UpdatedAt: time.Now(),
 	}
 
-	query := `INSERT INTO users (firstname, lastname, email, password, mobile, role, created_at, updated_at) 
+	//query to insert in users
+	query := `INSERT INTO users (name, email, mobile, password, role, created_at, updated_at) 
               VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id`
-	err = database.DB.QueryRow(query, user.FirstName, user.LastName, user.Email, user.Password, user.Mobile, user.Role, user.CreatedAt, user.UpdatedAt).Scan(&user.ID)
+	err = database.DB.QueryRow(query, user.Name, user.Email, user.Mobile, user.Password, "customer", user.CreatedAt, user.UpdatedAt).Scan(&user.ID)
 	if err != nil {
 		log.Printf("Error creating user: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
